@@ -1,11 +1,16 @@
 import { Component } from 'react';
-
+import { connect } from 'react-redux';
 import Form from './components/Form';
 import Contacts from './components/Contacts';
 import Filter from './components/Filter';
+import { contactsOperations } from './redux/contacts';
 
 class App extends Component {
   state = {};
+
+  componentDidMount() {
+    this.props.fetchContacts();
+  }
 
   render() {
     return (
@@ -19,4 +24,9 @@ class App extends Component {
     );
   }
 }
-export default App;
+
+const mapDispatchToProps = dispatch => ({
+  fetchContacts: () => dispatch(contactsOperations.fetchContacts()),
+});
+
+export default connect(null, mapDispatchToProps)(App);

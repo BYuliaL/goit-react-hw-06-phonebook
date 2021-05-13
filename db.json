@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "name": "nik",
+      "number": "0983456745",
+      "id": 1
+    },
+    {
+      "name": "bob",
+      "number": "0965132935",
+      "id": 2
+    },
+    {
+      "name": "cherry",
+      "number": "09651329358",
+      "id": 3
+    }
+  ]
+}
